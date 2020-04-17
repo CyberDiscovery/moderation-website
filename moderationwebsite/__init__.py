@@ -1,7 +1,11 @@
-from flask import Flask, render_template, redirect, url_for
-from flask_discord import DiscordOAuth2Session
-from moderationwebsite.constants import DISCORD_CLIENT_ID, DISCORD_CLIENT_SECRET, DISCORD_REDIRECT_URI
 from os import environ
+
+from flask import Flask, redirect, render_template, url_for
+from flask_discord import DiscordOAuth2Session
+
+from moderationwebsite.constants import (DISCORD_CLIENT_ID,
+                                         DISCORD_CLIENT_SECRET,
+                                         DISCORD_REDIRECT_URI)
 
 app = Flask(__name__)
 app.secret_key = environ.get("FLASKSECRET")
