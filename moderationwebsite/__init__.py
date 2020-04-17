@@ -76,3 +76,7 @@ def notfound(e):
 @app.errorhandler(500)
 def servererror(e):
     return render_template("error.html", title="Internal Server Error", body="It seems you've angered Beano. Make him fix this.")
+
+
+def main():
+    app.run(host="0.0.0.0", port=80)
