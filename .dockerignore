@@ -1,0 +1,6 @@
+azure-pipelines
+.gitignore
+deployment.yaml
+LICENSE
+README.md
+tox.ini
