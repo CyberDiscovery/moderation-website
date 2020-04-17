@@ -3,9 +3,11 @@ from os import environ
 from flask import Flask, redirect, render_template, url_for
 from flask_discord import DiscordOAuth2Session
 
-from moderationwebsite.constants import (DISCORD_CLIENT_ID,
-                                         DISCORD_CLIENT_SECRET,
-                                         DISCORD_REDIRECT_URI)
+from moderationwebsite.constants import (
+    DISCORD_CLIENT_ID,
+    DISCORD_CLIENT_SECRET,
+    DISCORD_REDIRECT_URI,
+)
 
 app = Flask(__name__)
 app.secret_key = environ.get("FLASKSECRET")
@@ -61,21 +63,16 @@ def start():
         return redirect(url_for(".login"))
 
 
-@app.errorhandler(404)
-def notfound(e):
-    return render_template("404.html")
-
-
 @app.errorhandler(403)
 def forbidden(e):
-    return render_template("403.html")
+    return render_template("error.html", title="Forbidden", body="Wait a second, you're not Tref!")
 
 
-@app.errorhandler(410)
-def deleted(e):
-    return render_template("410.html")
+@app.errorhandler(404)
+def notfound(e):
+    return render_template("error.html", title="Page Not Found", body="Silly Ana, this isn't your k-pop fanpage.")
 
 
 @app.errorhandler(500)
 def servererror(e):
-    return render_template("500.html")
+    return render_template("error.html", title="Internal Server Error", body="It seems you've angered Beano. Make him fix this.")
