@@ -40,7 +40,7 @@ stages:
         - task: Kubernetes@1
           displayName: 'Delete Old Deployment'
           inputs:
-            kubernetesServiceEndpoint: 'Kubernetes Environment-default-1585519522695'
+            kubernetesServiceEndpoint: 'Kubernetes Environment-default-1587170276979'
             command: delete
             arguments: 'deployment.extensions/quotes-website'
             versionSpec: 1.15.0
@@ -48,7 +48,7 @@ stages:
         - task: Kubernetes@1
           displayName: 'Deploy to Google Kubernetes Engine'
           inputs:
-            kubernetesServiceEndpoint: 'Kubernetes Environment-default-1585519522695'
+            kubernetesServiceEndpoint: 'Kubernetes Environment-default-1587170276979'
             command: apply
             useConfigurationFile: true
             configuration: '$(System.DefaultWorkingDirectory)/deployment.yaml'
