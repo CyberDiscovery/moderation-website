@@ -201,7 +201,7 @@ description = "Discord OAuth2 extension for Flask."
 name = "flask-discord"
 optional = false
 python-versions = "*"
-version = "0.1.10"
+version = "0.1.11"
 
 [package.dependencies]
 Flask = "*"
@@ -418,7 +418,7 @@ dev = ["pytest", "pytest-timeout", "coverage", "tox", "sphinx", "pallets-sphinx-
 watchdog = ["watchdog"]
 
 [metadata]
-content-hash = "7bc85e85d38e312dfd0bd5bcb6a6588851e86c951c931057d5f5cc12d8574c34"
+content-hash = "612385a372356180dada0730716f7206d76d5f26865df6dbff75b7ebc8980536"
 python-versions = "^3.8"
 
 [metadata.files]
@@ -489,8 +489,8 @@ flask = [
     {file = "Flask-1.1.2.tar.gz", hash = "sha256:4efa1ae2d7c9865af48986de8aeb8504bf32c7f3d6fdc9353d34b21f4b127060"},
 ]
 flask-discord = [
-    {file = "Flask-Discord-0.1.10.tar.gz", hash = "sha256:51be37fd4977fb8463115099a50735e2deb5ed29bc21b9f4aa00f173150e9b26"},
-    {file = "Flask_Discord-0.1.10-py3-none-any.whl", hash = "sha256:2d2f506ddb3d268e71f9cfa06822aaf9498a7cb05b2e5c8bc34fbbb8f9015a0e"},
+    {file = "Flask-Discord-0.1.11.tar.gz", hash = "sha256:2e21adb16be847d21d65f0a3603c823b099827821aae196f4e8afa6c7c8c0b1f"},
+    {file = "Flask_Discord-0.1.11-py3-none-any.whl", hash = "sha256:44d78fd6ef208ff5c542ed10adedff83410a3761840860bd0b8a6d46f871e283"},
 ]
 gitdb = [
     {file = "gitdb-4.0.4-py3-none-any.whl", hash = "sha256:ba1132c0912e8c917aa8aa990bee26315064c7b7f171ceaaac0afeb1dc656c6a"},
