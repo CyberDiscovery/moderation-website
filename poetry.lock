@@ -29,6 +29,14 @@ stevedore = ">=1.20.0"
 
 [[package]]
 category = "main"
+description = "Extensible memoizing collections and decorators"
+name = "cachetools"
+optional = false
+python-versions = "~=3.5"
+version = "4.1.0"
+
+[[package]]
+category = "main"
 description = "Python package for providing Mozilla's CA Bundle."
 name = "certifi"
 optional = false
@@ -201,10 +209,12 @@ description = "Discord OAuth2 extension for Flask."
 name = "flask-discord"
 optional = false
 python-versions = "*"
-version = "0.1.50"
+version = "0.1.54"
 
 [package.dependencies]
 Flask = "*"
+cachetools = "*"
+oauthlib = "*"
 requests-oauthlib = "*"
 
 [[package]]
@@ -418,7 +428,7 @@ dev = ["pytest", "pytest-timeout", "coverage", "tox", "sphinx", "pallets-sphinx-
 watchdog = ["watchdog"]
 
 [metadata]
-content-hash = "ecb9c38ed45672d1eff29e5567b701b5517c9055cdda938c886b22bd460bd83c"
+content-hash = "d5274ea97e083d1f931693cb8b3b96e5b54bd86837bf691a8a330ca3b15815a4"
 python-versions = "^3.8"
 
 [metadata.files]
@@ -429,6 +439,10 @@ attrs = [
 bandit = [
     {file = "bandit-1.6.2-py2.py3-none-any.whl", hash = "sha256:336620e220cf2d3115877685e264477ff9d9abaeb0afe3dc7264f55fa17a3952"},
     {file = "bandit-1.6.2.tar.gz", hash = "sha256:41e75315853507aa145d62a78a2a6c5e3240fe14ee7c601459d0df9418196065"},
+]
+cachetools = [
+    {file = "cachetools-4.1.0-py3-none-any.whl", hash = "sha256:de5d88f87781602201cde465d3afe837546663b168e8b39df67411b0bf10cefc"},
+    {file = "cachetools-4.1.0.tar.gz", hash = "sha256:1d057645db16ca7fe1f3bd953558897603d6f0b9c51ed9d11eb4d071ec4e2aab"},
 ]
 certifi = [
     {file = "certifi-2020.4.5.1-py2.py3-none-any.whl", hash = "sha256:1d987a998c75633c40847cc966fcf5904906c920a7f17ef374f5aa4282abd304"},
@@ -489,8 +503,8 @@ flask = [
     {file = "Flask-1.1.2.tar.gz", hash = "sha256:4efa1ae2d7c9865af48986de8aeb8504bf32c7f3d6fdc9353d34b21f4b127060"},
 ]
 flask-discord = [
-    {file = "Flask-Discord-0.1.50.tar.gz", hash = "sha256:bd167f08f91ea9177f283b9f25f0c4e5cd905b47a5865673e54f15271d7fe662"},
-    {file = "Flask_Discord-0.1.50-py3-none-any.whl", hash = "sha256:0a664d776b6cc5e49899eebf54beeaaeb761d1e4158ccd3253082c75d3330a41"},
+    {file = "Flask-Discord-0.1.54.tar.gz", hash = "sha256:9515cca43f5f82244eb24c828e457684ff530fa05309f11fc51682021b1b497d"},
+    {file = "Flask_Discord-0.1.54-py3-none-any.whl", hash = "sha256:dddac845fae5d14502dce1c7dcddca444736e665ee241c23664a598bb054dd0b"},
 ]
 gitdb = [
     {file = "gitdb-4.0.4-py3-none-any.whl", hash = "sha256:ba1132c0912e8c917aa8aa990bee26315064c7b7f171ceaaac0afeb1dc656c6a"},
@@ -584,6 +598,7 @@ pyyaml = [
     {file = "PyYAML-5.3.1.tar.gz", hash = "sha256:b8eac752c5e14d3eca0e6dd9199cd627518cb5ec06add0de9d32baeee6fe645d"},
 ]
 requests = [
+    {file = "requests-2.23.0-py2.7.egg", hash = "sha256:5d2d0ffbb515f39417009a46c14256291061ac01ba8f875b90cad137de83beb4"},
     {file = "requests-2.23.0-py2.py3-none-any.whl", hash = "sha256:43999036bfa82904b6af1d99e4882b560e5e2c68e5c4b0aa03b655f3d7d73fee"},
     {file = "requests-2.23.0.tar.gz", hash = "sha256:b3f43d496c6daba4493e7c431722aeb7dbc6288f52a6e04e7b6023b0247817e6"},
 ]
