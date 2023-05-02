@@ -7,7 +7,7 @@ license = "MIT"
 
 [tool.poetry.dependencies]
 python = "^3.8"
-flask = "^1.1.1"
+flask = "^2.3.2"
 Flask-Discord = "^0.1.50"
 
 [tool.poetry.dev-dependencies]
